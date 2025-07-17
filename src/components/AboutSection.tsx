@@ -41,7 +41,7 @@ const AboutSection = () => {
             <Card className="bg-gradient-card border-border shadow-card">
               <CardContent className="p-8">
                 <blockquote className="text-lg text-muted-foreground leading-relaxed italic">
-                  "Experienced DevOps Engineer with a strong background in infrastructure automation and cloud operations. Proficient in Terraform, Docker, Kubernetes, and Microsoft Azure. Skilled in building scalable, secure, and automated CI/CD pipelines and containerized deployments. Passionate about solving problems with automation and continuous learning."
+                  "Experienced DevOps Engineer with a strong background in infrastructure automation and cloud operations. Proficient in Terraform, Docker, Kubernetes, and Microsoft Azure. Skilled in building scalable, secure, and automated CI/CD pipelines and containerized deployments. Passionate about solving problems with automation & continuous learning."
                 </blockquote>
               </CardContent>
             </Card>
