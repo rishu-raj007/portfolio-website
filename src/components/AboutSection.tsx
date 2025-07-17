@@ -65,8 +65,9 @@ const AboutSection = () => {
             <Button 
               className="bg-gradient-primary hover:shadow-primary transition-all duration-300 animate-fade-in"
               style={{ animationDelay: "0.6s" }}
+              onClick={() => window.open("https://drive.google.com/file/d/14JmTwtuSiajNzW53CY_ErIjPLbTIAuWc/view?usp=drive_link", "_blank")}
             >
-              <Download className="w-4 h-4 mr-2" />
+              <Download className="w-4 h-4 mr-2"  />
               Download Resume
             </Button>
           </div>
