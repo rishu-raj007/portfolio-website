@@ -10,7 +10,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 lg:pt-0">
       {/* Background Image with Overlay */}
       <div 
   className="absolute inset-0 bg-cover bg-center bg-no-repeat filter blur-sm"
@@ -31,15 +31,15 @@ const HeroSection = () => {
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
           {/* Left Content - Profile Image */}
-          <div className="flex-shrink-0 animate-fade-in relative group" style={{ animationDelay: "0.2s" }}>
+          <div className="flex-shrink-0 animate-fade-in relative group mx-auto lg:mx-0" style={{ animationDelay: "0.2s" }}>
             {/* Ambient Glow */}
             <div className="absolute -inset-2 bg-gradient-primary rounded-2xl blur-lg opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
             {/* Main Image Card */}
-            <div className="relative w-64 h-80 sm:w-80 sm:h-96 lg:w-80 lg:h-[420px] bg-card rounded-2xl overflow-hidden border border-primary/30 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02] group-hover:-translate-y-1">
+            <div className="relative w-56 h-72 sm:w-80 sm:h-96 lg:w-80 lg:h-[420px] bg-card rounded-2xl overflow-hidden border border-primary/30 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02] group-hover:-translate-y-1">
               <img 
                 src={profileImage} 
                 alt="Rishu Ravi Raj" 
-                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover object-[center_45%] group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
               {/* Tiny dynamic tag on image */}
