@@ -11,7 +11,7 @@ const AboutSection = () => {
       color: "hover:text-blue-400"
     },
     {
-      name: "GitHub", 
+      name: "GitHub",
       icon: Github,
       url: "https://github.com/rishu-raj007",
       color: "hover:text-gray-300"
@@ -62,12 +62,12 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <Button 
+            <Button
               className="bg-gradient-primary hover:shadow-primary transition-all duration-300 animate-fade-in"
               style={{ animationDelay: "0.6s" }}
-              onClick={() => window.open("https://drive.google.com/file/d/14JmTwtuSiajNzW53CY_ErIjPLbTIAuWc/view?usp=drive_link", "_blank")}
+              onClick={() => window.open("https://drive.google.com/file/d/1xcgwrMiNMi9Ksh0BozJX-Wgb3KF3o4mT/view?usp=sharing", "_blank")}
             >
-              <Download className="w-4 h-4 mr-2"  />
+              <Download className="w-4 h-4 mr-2" />
               Download Resume
             </Button>
           </div>
