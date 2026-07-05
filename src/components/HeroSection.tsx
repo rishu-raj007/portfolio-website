@@ -31,28 +31,40 @@ const HeroSection = () => {
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
           {/* Left Content - Profile Image */}
-          <div className="flex-shrink-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <div className="relative">
+          <div className="flex-shrink-0 animate-fade-in relative group" style={{ animationDelay: "0.2s" }}>
+            {/* Ambient Glow */}
+            <div className="absolute -inset-2 bg-gradient-primary rounded-2xl blur-lg opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+            {/* Main Image Card */}
+            <div className="relative w-64 h-80 sm:w-80 sm:h-96 lg:w-80 lg:h-[420px] bg-card rounded-2xl overflow-hidden border border-primary/30 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02] group-hover:-translate-y-1">
               <img 
                 src={profileImage} 
                 alt="Rishu Ravi Raj" 
-                className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-primary/20 shadow-xl hover:shadow-glow transition-all duration-300"
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-primary/10"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+              {/* Tiny dynamic tag on image */}
+              <div className="absolute bottom-4 left-4 bg-background/80 backdrop-blur-md border border-primary/30 px-3 py-1 rounded-lg text-xs font-semibold text-primary">
+                Cloud & DevOps
+              </div>
             </div>
           </div>
 
           {/* Right Content */}
           <div className="flex-1 text-center lg:text-left animate-fade-in">
+            <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 px-4 py-1.5 rounded-full text-xs text-emerald-400 mb-6 animate-pulse">
+              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span className="font-semibold tracking-wider uppercase">Open to DevOps Opportunities</span>
+            </div>
+
             <h1 className="text-4xl  sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6">
-              <span className="block">Rishu Raj</span>
-              <span className="block text-transparent bg-gradient-primary bg-clip-text">
+              <span className="block">Rishu Ravi Raj</span>
+              <span className="block text-transparent bg-gradient-primary bg-clip-text font-extrabold">
                 DevOps Engineer
               </span>
             </h1>
             
             <p className="text-lg text-white sm:text-xl lg:text-2xl text-muted-foreground mb-8 max-w-2xl lg:max-w-none leading-relaxed">
-              Building scalable infrastructure and automated solutions in the cloud
+              4+ years of expertise in cloud infrastructure automation, CI/CD pipelines, and container orchestration.
             </p>
 
             <div className="flex items-center justify-center text-white lg:justify-start text-muted-foreground mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>

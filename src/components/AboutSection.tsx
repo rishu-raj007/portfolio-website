@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download, Github, Linkedin, Mail } from "lucide-react";
+import { Download, Github, Linkedin, Mail, Clock, ShieldCheck, Zap, Server } from "lucide-react";
 
 const AboutSection = () => {
   const socialLinks = [
@@ -41,7 +41,7 @@ const AboutSection = () => {
             <Card className="bg-gradient-card border-border shadow-card">
               <CardContent className="p-8">
                 <blockquote className="text-lg text-muted-foreground leading-relaxed italic">
-                  "Experienced DevOps Engineer with a strong background in infrastructure automation and cloud operations. Proficient in Terraform, Docker, Kubernetes, and Microsoft Azure. Skilled in building scalable, secure, and automated CI/CD pipelines and containerized deployments. Passionate about solving problems with automation & continuous learning."
+                  "Experienced DevOps Engineer with 4+ years of expertise in cloud infrastructure automation and operations. Proficient in Terraform for Infrastructure as Code, Docker for containerized deployments, and Kubernetes for orchestration. Committed to building secure, cost-optimized, and highly available cloud environments."
                 </blockquote>
               </CardContent>
             </Card>
@@ -74,56 +74,88 @@ const AboutSection = () => {
 
           <div className="space-y-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <div className="grid grid-cols-2 gap-6">
-              <Card className="bg-gradient-card border-border shadow-card hover:shadow-glow transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-primary mb-2">3.2+</h3>
-                  <p className="text-muted-foreground">Years Experience</p>
+              <Card className="bg-gradient-card border-border shadow-card hover:shadow-glow hover:-translate-y-1 transition-all duration-300 group">
+                <CardContent className="p-6 text-center flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                    <Clock className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-1">4+</h3>
+                  <p className="text-xs text-muted-foreground">Years Experience</p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-card border-border shadow-card hover:shadow-glow transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-primary mb-2">10+</h3>
-                  <p className="text-muted-foreground">Projects Deployed</p>
+              <Card className="bg-gradient-card border-border shadow-card hover:shadow-glow hover:-translate-y-1 transition-all duration-300 group">
+                <CardContent className="p-6 text-center flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                    <Server className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-1">10+</h3>
+                  <p className="text-xs text-muted-foreground">Projects Deployed</p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-card border-border shadow-card hover:shadow-glow transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-primary mb-2">100%</h3>
-                  <p className="text-muted-foreground">Automation Focus</p>
+              <Card className="bg-gradient-card border-border shadow-card hover:shadow-glow hover:-translate-y-1 transition-all duration-300 group">
+                <CardContent className="p-6 text-center flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                    <Zap className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-1">100%</h3>
+                  <p className="text-xs text-muted-foreground">Automation Focus</p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-card border-border shadow-card hover:shadow-glow transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-primary mb-2">24/7</h3>
-                  <p className="text-muted-foreground">System Reliability</p>
+              <Card className="bg-gradient-card border-border shadow-card hover:shadow-glow hover:-translate-y-1 transition-all duration-300 group">
+                <CardContent className="p-6 text-center flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                    <ShieldCheck className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-1">24/7</h3>
+                  <p className="text-xs text-muted-foreground">System Reliability</p>
                 </CardContent>
               </Card>
             </div>
 
             <Card className="bg-gradient-card border-border shadow-card">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-4">Core Competencies</h3>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                    Infrastructure as Code (Terraform)
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                    Container Orchestration (Kubernetes)
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                    Cloud Architecture (Microsoft Azure)
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                    CI/CD Pipeline Automation
-                  </li>
-                </ul>
+                <h3 className="text-xl font-semibold text-foreground mb-6">Core Competencies</h3>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex justify-between text-sm mb-1">
+                      <span className="text-muted-foreground">Infrastructure as Code (Terraform)</span>
+                      <span className="text-primary font-medium">95%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-1.5 overflow-hidden">
+                      <div className="bg-primary h-1.5 rounded-full" style={{ width: '95%' }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-sm mb-1">
+                      <span className="text-muted-foreground">Container Orchestration (Kubernetes/AKS)</span>
+                      <span className="text-primary font-medium">90%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-1.5 overflow-hidden">
+                      <div className="bg-primary h-1.5 rounded-full" style={{ width: '90%' }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-sm mb-1">
+                      <span className="text-muted-foreground">Cloud Architecture (Microsoft Azure)</span>
+                      <span className="text-primary font-medium">92%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-1.5 overflow-hidden">
+                      <div className="bg-primary h-1.5 rounded-full" style={{ width: '92%' }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-sm mb-1">
+                      <span className="text-muted-foreground">CI/CD Pipeline Automation (ADO & Git)</span>
+                      <span className="text-primary font-medium">95%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-1.5 overflow-hidden">
+                      <div className="bg-primary h-1.5 rounded-full" style={{ width: '95%' }}></div>
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>

@@ -20,48 +20,77 @@ import {
 } from "lucide-react";
 
 const SkillsSection = () => {
+  const getBadgeStyle = (categoryTitle: string) => {
+    const title = categoryTitle.toLowerCase();
+    if (title.includes("cloud")) {
+      return "bg-blue-500/15 text-blue-400 border-blue-500/20 hover:bg-blue-500/25";
+    }
+    if (title.includes("containers")) {
+      return "bg-emerald-500/15 text-emerald-400 border-emerald-500/20 hover:bg-emerald-500/25";
+    }
+    if (title.includes("ticketing")) {
+      return "bg-orange-500/15 text-orange-400 border-orange-500/20 hover:bg-orange-500/25";
+    }
+    if (title.includes("tools")) {
+      return "bg-purple-500/15 text-purple-400 border-purple-500/20 hover:bg-purple-500/25";
+    }
+    if (title.includes("security")) {
+      return "bg-rose-500/15 text-rose-400 border-rose-500/20 hover:bg-rose-500/25";
+    }
+    if (title.includes("monitoring")) {
+      return "bg-amber-500/15 text-amber-400 border-amber-500/20 hover:bg-amber-500/25";
+    }
+    return "bg-cyan-500/15 text-cyan-400 border-cyan-500/20 hover:bg-cyan-500/25";
+  };
+
   const skillCategories = [
     {
-      title: "Cloud & Operating Systems",
+      title: "Cloud & OS",
       icon: Cloud,
-      skills: ["Microsoft Azure", "Linux"],
+      skills: ["Azure", "Linux"],
       color: "text-blue-400"
     },
     {
-      title: "Containers & Infrastructure",
+      title: "Containers & IaC",
       icon: Container,
-      skills: ["Docker", "Terraform", "Kubernetes", "AKS"],
+      skills: ["Docker", "Terraform", "Kubernetes"],
       color: "text-green-400"
     },
     {
-      title: "Development Tools",
+      title: "Ticketing Tools",
+      icon: Settings,
+      skills: ["Service Now"],
+      color: "text-orange-400"
+    },
+    {
+      title: "Tools & CLI",
       icon: Terminal,
-      skills: ["Azure CLI", "Git", "Azure Pipelines", "ADO", "GitHub Actions"],
+      skills: ["Azure CLI", "Azure Storage", "Git", "Azure Pipelines", "ADO"],
       color: "text-purple-400"
     },
     {
       title: "Security & Compliance",
       icon: Shield,
-      skills: ["TFsec", "TFLint", "Checkov", "Azure Entra ID"],
+      skills: ["SonarQube", "Veracode", "TFsec", "TFLint", "checkov"],
       color: "text-red-400"
     },
     {
-      title: "Monitoring & Analytics",
+      title: "Monitoring",
       icon: BarChart3,
-      skills: ["Prometheus", "Grafana", "Azure Monitor"],
+      skills: ["Prometheus", "Grafana", "Datadog"],
       color: "text-yellow-400"
     },
     {
       title: "Soft Skills",
       icon: Users,
-      skills: ["Agile", "Collaboration", "Communication", "Leadership", "Problem-solving"],
+      skills: ["Agile", "Team collaboration", "Communication", "Problem-Solving", "Proactive Learning", "Accountability", "Leadership", "Kanban"],
       color: "text-cyan-400"
     }
   ];
 
   const interests = [
     { name: "Photography", icon: Star },
-    { name: "AI Tools", icon: Zap },
+    { name: "Playing With AI tools", icon: Zap },
     { name: "Continuous Learning", icon: TrendingUp },
     { name: "Open Source", icon: Github }
   ];
@@ -82,15 +111,15 @@ const SkillsSection = () => {
           {skillCategories.map((category, index) => (
             <Card 
               key={category.title} 
-              className="bg-gradient-card border-border shadow-card hover:shadow-primary/20 transition-all duration-300 animate-fade-in"
+              className="bg-gradient-card border-border shadow-card hover:shadow-glow hover:-translate-y-1 transition-all duration-300 animate-fade-in group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 group-hover:scale-105 group-hover:rotate-6 transition-all duration-300">
                     <category.icon className={`w-6 h-6 ${category.color}`} />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground">
+                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                     {category.title}
                   </h3>
                 </div>
@@ -100,7 +129,7 @@ const SkillsSection = () => {
                     <Badge 
                       key={skill} 
                       variant="secondary"
-                      className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors"
+                      className={`border text-xs px-2.5 py-0.5 transition-colors ${getBadgeStyle(category.title)}`}
                     >
                       {skill}
                     </Badge>
